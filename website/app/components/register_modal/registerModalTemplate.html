@@ -1,0 +1,73 @@
+<div class="modal-header">
+	<h2 class="modal-title">Login</h2>
+</div>
+<div class="modal-body">
+	<h3>Please enter your email and password to register</h3>
+	<form name="registerMLoginID" novalidate class="form-horizontal">
+
+		<div class="form-group" ng-class="{ 'has-error':enterName.registerMLoginID.$dirty && enterName.registerMLoginID.$invalid,
+											'has-success':enterName.registerMLoginID.$dirty && enterName.registerMLoginID.$valid}">
+			<label class="col-sm-2 control-label" for="lastName">Login (Email)</label>
+			<div class="col-sm-10">
+				<input class="form-control" id="emailID" name="emailID" ng-pattern="/^[0-9]+( [0-9]+)?$/" ng-model="current.registerMLoginID" required placeholder="Email ID" />
+			</div>
+			<p class="col-sm-offset-2 col-sm-4 text-danger">
+				<span ng-show="enterName.registerMLoginID.$dirty && enterName.registerMLoginID.$invalid">
+					<span ng-show="enterName.registerMLoginID.$error.required">Email ID is required</span>
+					<span ng-show="enterName.registerMLoginID.$error.pattern">Email ID must be like 56789990</span>
+				</span>&nbsp;
+			</p>
+		</div>
+	</form>
+	<form name="registerM_Password" novalidate class="form-horizontal">
+
+		<div class="form-group" ng-class="{ 'has-error':enterName.registerMPassword.$dirty && enterName.registerMPassword.$invalid,
+											'has-success':enterName.registerMPassword.$dirty && enterName.registerMPassword.$valid}">
+			<label class="col-sm-2 control-label" for="Password">Password</label>
+			<div class="col-sm-10">
+				<input class="form-control" id="Password" name="Password" ng-pattern="/^[0-9]+( [0-9]+)?$/" ng-model="current.registerMPassword" required placeholder="Password" />
+			</div>
+			<p class="col-sm-offset-2 col-sm-4 text-danger">
+				<span ng-show="enterName.registerMPassword.$dirty && enterName.registerMPassword.$invalid">
+					<span ng-show="enterName.registerMPassword.$error.required">Password is required</span>
+					<span ng-show="enterName.registerMPassword.$error.pattern">Password must contain one letter and one number</span>
+				</span>&nbsp;
+			</p>
+		</div>
+	</form>
+	<form name="registerM_FirstName" novalidate class="form-horizontal">
+
+		<div class="form-group" ng-class="{ 'has-error':enterName.registerM_FirstName.$dirty && enterName.registerM_FirstName.$invalid, 'has-success':enterName.registerM_FirstName.$dirty && enterName.registerM_FirstName.$valid}">
+			<label class="col-sm-2 control-label" for="Password">Password</label>
+			<div class="col-sm-10">
+				<input class="form-control" id="Password" name="Password" ng-pattern="/^[0-9]+( [0-9]+)?$/" ng-model="current.registerM_FirstName" required placeholder="First Name" />
+			</div>
+			<p class="col-sm-offset-2 col-sm-4 text-danger">
+				<span ng-show="enterName.registerM_FirstName.$dirty && enterName.registerM_FirstName.$invalid">
+					<span ng-show="enterName.registerM_FirstName.$error.required">Password is required</span>
+					<span ng-show="enterName.registerM_FirstName.$error.pattern">Password must contain one letter and one number</span>
+				</span>&nbsp;
+			</p>
+		</div>
+	</form>	
+	<form name="registerM_LastName" novalidate class="form-horizontal">
+
+		<div class="form-group" ng-class="{ 'has-error':enterName.registerM_LastName.$dirty && enterName.registerM_LastName.$invalid, 'has-success':enterName.registerM_LastName.$dirty && enterName.registerM_LastName.$valid}">
+			<label class="col-sm-2 control-label" for="Password">Password</label>
+			<div class="col-sm-10">
+				<input class="form-control" id="Password" name="Password" ng-pattern="/^[0-9]+( [0-9]+)?$/" ng-model="current.registerM_LastName" required placeholder="First Name" />
+			</div>
+			<p class="col-sm-offset-2 col-sm-4 text-danger">
+				<span ng-show="enterName.registerM_LastName.$dirty && enterName.registerM_LastName.$invalid">
+					<span ng-show="enterName.registerM_LastName.$error.required">Password is required</span>
+					<span ng-show="enterName.registerM_LastName.$error.pattern">Password must contain one letter and one number</span>
+				</span>&nbsp;
+			</p>
+		</div>
+	</form>	
+</div>
+
+<div class="modal-footer">
+	<button type="button" class="btn" data-ng-click="modalOptions.close()">{{modalOptions.closeButtonText}}</button>
+	<button class="btn btn-primary" data-ng-click="modalOptions.ok()">{{modalOptions.actionButtonText}}</button>
+</div>

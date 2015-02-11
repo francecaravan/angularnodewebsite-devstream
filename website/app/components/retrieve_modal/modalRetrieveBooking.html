@@ -1,0 +1,28 @@
+<div class="modal-header">
+	<h2 class="modal-title">{{modalOptions.titleText}}</h2>
+</div>
+<div class="modal-body">
+	<h3>{{modalOptions.bodyText}}</h3>
+	<form name="bookingID" novalidate class="form-horizontal">
+
+		<div class="form-group" ng-class="{ 'has-error':enterName.retbookingNumber.$dirty && enterName.retbookingNumber.$invalid,
+											'has-success':enterName.retbookingNumber.$dirty && enterName.retbookingNumber.$valid}">
+			<label class="col-sm-2 control-label" for="lastName">Booking Number</label>
+			<div class="col-sm-10">
+				<input class="form-control" id="retbookingNumber" name="retbookingNumber" ng-pattern="/^[0-9]+( [0-9]+)?$/" ng-model="current.retbookingNumber" required placeholder="Booking Number" />
+			</div>
+			<p class="col-sm-offset-2 col-sm-4 text-danger">
+				<span ng-show="enterName.retbookingNumber.$dirty && enterName.retbookingNumber.$invalid">
+					<span ng-show="enterName.retbookingNumber.$error.required">Booking number is required</span>
+					<span ng-show="enterName.retbookingNumber.$error.pattern">Booking number must be like 56789990</span>
+				</span>&nbsp;
+			</p>
+		</div>
+	</form>
+</div>
+
+<div class="modal-footer">
+	<button type="button" class="btn" data-ng-click="modalOptions.close()">{{modalOptions.closeButtonText}}</button>
+	<button class="btn btn-primary" data-ng-click="modalOptions.ok()">{{modalOptions.actionButtonText}}</button>
+</div>
+	

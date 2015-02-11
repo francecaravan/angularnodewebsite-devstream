@@ -1,0 +1,44 @@
+/* Overall Page */
+
+html {
+height: 100vh;
+width: 100vw;
+}
+
+body {
+    /*margin-top: 75px;*/
+}
+
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+/* Text Formatting for pages */
+h2, h3 {
+text-align: center;
+}
+
+/* Title Header */
+
+.title_container {
+height:100px;
+padding: 0px;
+margin: 0px;
+}
+
+.title_img {
+width: 100%;
+height: 100px;
+}
+
+#top_header {
+height: 63px;
+}
+
+.btn-login-style {
+margin-top:11px;
+margin-bottom:12px;
+margin-right:10px;
+height: 40px; 
+width:80px;
+float: right;
+}
+

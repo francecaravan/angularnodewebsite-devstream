@@ -1,0 +1,48 @@
+<div class="modal-header">
+	<h2 class="modal-title">Login</h2>
+</div>
+<div class="modal-body">
+
+	<h3>Please enter your email and password to login</h3>
+
+	<form name="loginM_LoginID" class="form-horizontal">
+
+		<div class="form-group" ng-class="{ 'has-error':loginM_LoginID.emailID.$dirty && loginM_LoginID.emailID.$invalid,
+											'has-success':loginM_LoginID.emailID.$dirty && loginM_LoginID.emailID.$valid}">
+			<label class="col-sm-2 control-label" for="LoginID">Email</label>
+			<div class="col-sm-10">
+				<input auto-focus type="text" class="form-control" id="emailID" name="emailID" ng-pattern="/^[0-9]+( [0-9]+)?$/" ng-model="loginMloginID" required placeholder="Email ID" />
+					Login is {{loginMloginID}}
+			</div>
+			<p class="col-sm-offset-2 col-sm-10 text-danger">
+				<span ng-show="loginM_LoginID.emailID.$dirty && loginM_LoginID.emailID.$invalid">
+					<span ng-show="loginM_LoginID.emailID.$error.required">Email ID is required</span>
+					<span ng-show="loginM_LoginID.emailID.$error.pattern">Email ID must be like 56789990</span>
+				</span>&nbsp;
+			</p>
+		</div>
+	</form>
+	<form name="loginM_Password" novalidate class="form-horizontal">
+
+		<div class="form-group" ng-class="{ 'has-error':loginM_Password.Password.$dirty && loginM_Password.Password.$invalid,
+											'has-success':loginM_Password.Password.$dirty && loginM_Password.Password.$valid}">
+			<label class="col-sm-2 control-label" for="Password">Password</label>
+			<div class="col-sm-10">
+				<input type="text" class="form-control" id="Password" name="Password" ng-pattern="/^[0-9]+( [0-9]+)?$/" ng-model="loginMPassword" required placeholder="Password" />
+			</div>
+			<p class="col-sm-offset-2 col-sm-10 text-danger">
+				<span ng-show="loginM_Password.Password.$dirty && loginM_Password.Password.$invalid">
+					<span ng-show="loginM_Password.Password.$error.required">Password is required</span>
+					<span ng-show="loginM_Password.Password.$error.pattern">Password must contain one letter and one number</span>
+				</span>&nbsp;
+			</p>
+		</div>
+	</form>
+</div>
+{{loginMloginID}}
+{{loginMPassword}}
+<div class="modal-footer">
+	<button type="button" class="btn" data-ng-click="display(loginMloginID,loginMPassword)">check</button>
+	<button type="button" class="btn" data-ng-click="close('Cancel')">{{closeButtonText}}</button>
+	<button class="btn btn-primary" data-ng-click="ok(loginMloginID,loginMPassword)">{{actionButtonText}}</button>
+</div>

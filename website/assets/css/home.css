@@ -1,0 +1,20 @@
+/* Text on Home Page in Content Section */
+
+.blue {
+  background-color: blue;
+}
+
+.italic {
+  font-style: italic;
+  color: black;
+}
+
+/* Height rules for home page objects */
+
+.column1 {
+height: auto;
+}
+
+.column2 {
+height: auto;
+}

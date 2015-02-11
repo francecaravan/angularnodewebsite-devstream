@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html ng-app="franceCaravan">
+<!--<html>-->
+<head>
+    <title>France Caravan</title>
+
+	<!-- Google Fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'>
+	
+	<!-- External Files CSS -->
+	<link href="./assets/css/normalize.css" rel="stylesheet" />
+	<link href="./assets/libs/bower_components/angular-material/angular-material.css" rel="stylesheet" />
+    <link href="./assets/libs/bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />	
+    <link href="./assets/libs/bower_components/slider-pro-master/dist/css/slider-pro.css" rel="stylesheet" />	
+	
+	<!-- External Files JS -->
+	<script src="./assets/libs/bower_components/jquery/dist/jquery.js"></script>
+    <script src="./assets/libs/bower_components/angular/angular.js"></script>
+    <script src="./assets/libs/bower_components/angular-animate/angular-animate.js"></script>
+    <script src="./assets/libs/bower_components/angular-route/angular-route.js"></script>
+    <script src="./assets/libs/bower_components/angular-resource/angular-resource.js"></script>
+	<script src="./assets/libs/bower_components/angular-touch/angular-touch.min.js"></script>	
+    <script src="./assets/libs/bower_components/bootstrap/dist/js/bootstrap.js"></script>  
+    <script src="./assets/libs/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script> 
+	<script src="./assets/libs/bower_components/angular-material/angular-material.js"></script>
+	<script src="./assets/libs/bower_components/angular-aria/angular-aria.js"></script>
+	<script src="./assets/libs/bower_components/hammerjs/hammer.js"></script>
+	<script src="./assets/libs/bower_components/slider-pro-master/dist/js/jquery.sliderPro.js"></script>
+	<script src="./assets/libs/bower_components/ui-router/release/angular-ui-router.js"></script>
+	<script src="./assets/libs/bower_components/highcharts-ng/dist/highcharts-ng.js"></script>
+	<script src="./assets/libs/Highcharts-4/js/highcharts.js"></script>
+	<script src='./assets/libs/bower_components/angularfire/dist/angularfire.js'></script>
+	<script src='./assets/libs/bower_components/firebase/firebase.js'></script>
+	<!--<script src='https://cdn.firebase.com/js/client/2.0.4/firebase.js'></script>-->
+	
+	<!-- Internal Files -->
+	<!-- Styling -->
+    <link href="./assets/css/app.css" rel="stylesheet" />
+    <link href="./assets/css/home.css" rel="stylesheet" />
+    <link href="./assets/css/caravan.css" rel="stylesheet" />
+    <link href="./assets/css/book.css" rel="stylesheet" />
+    <link href="./assets/css/blog.css" rel="stylesheet" />
+    <!-- Application Configuration -->
+    <script src="./app/app.js"></script>
+    <!-- Page Controllers -->
+    <script src="./app/components/home/rs-home.js"></script>
+    <script src="./app/shared/nav/rs-nav.js"></script>
+	<script src="./app/shared/header/rs-header.js"></script>
+	<script src="./app/components/caravan/rs-caravan.js"></script>
+	<script src="./app/components/book/rs-book.js"></script>
+	<script src="./app/components/existingbooking/rs-existingbooking.js"></script>
+	<script src="./app/components/blog/rs-blog.js"></script>
+	<!-- Factories -->
+	<script src="./app/shared/factories/booking_factory.js"></script>
+	<script src="./app/shared/factories/manageBooking.js"></script>
+	<script src="./app/shared/factories/manageBlog.js"></script>	
+	<script src="./app/shared/factories/manageDeals.js"></script>	
+	<script src="./app/shared/factories/manageLogin.js"></script>
+	<!-- Services -->
+	<script src="./app/shared/services/modalService.js"></script>
+	<script src="./app/shared/services/loginService.js"></script>
+	<!-- Directives -->
+	<script src="./app/shared/directives/focus_directive.js"></script>
+
+	<!-- meta data -->	    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1">
+    <meta name="description" content="France Caravan Booking Site">
+    <meta name="author" content="Karl Taylor">
+</head>
+
+<body>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-57565979-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+	<!-- title image -->
+	
+	<header id="top_header" ng-controller="topHeaderCtrl">
+		<div class = "row">
+			<div class="col-xs-2 col-sm-2 col-md-2">	
+				<h2>Hits = {{firebase_data.WebsiteStats.Number}}</h2>
+			</div>
+			<div class="col-xs-7 col-sm-7 col-md-7">	
+			</div>
+			<div class="col-xs-1 col-sm-1 col-md-1">	
+					<button type="button" class="btn btn-sm btn-login-style" ng-click="clickLogin2()">Login2</button>
+			</div>
+			<div class="col-xs-1 col-sm-1 col-md-1">	
+					<button type="button" class="btn btn-sm btn-login-style" ng-click="clickRegister()">Register</button>
+			</div>
+			<div class="col-xs-1 col-sm-1 col-md-1">	
+					<button type="button" class="btn btn-sm btn-login-style" ng-click="clickLogin()">Login</button>
+			</div>
+		</div>		
+	</header>
+	
+	
+	<header id="title_container">
+			<div class="row">	
+				<div class="col-xs-12 col-sm-12 col-md-12">
+					<img class="title_img" src="./assets/img/heading.jpg" class="title" alt="heading" ng-click="$location.path('home')">
+				</div>
+			</div>
+	</header>
+	
+	<!-- Different Views -->		
+    <article ui-view></article>
+
+	<!-- Footer -->
+	<footer id="footer">
+		<div class="container">
+			<div class="row">
+				<h3 class="footertext">About Us:</h3>
+				<br>
+				  <div class="col-md-4">
+					<center>
+					  <img src="./assets/img/2z7enpc.png" class="img-circle" alt="...">
+					  <br>
+					  <h4 class="footertext">Landlords</h4>
+					  <p class="footertext">Taylor & Mills Holdings.<br>
+					</center>
+				  </div>
+				  <div class="col-md-4">
+					<center>
+					  <img src="./assets/img/w8lycl.png" class="img-circle" alt="the-brains">
+					  <br>
+					  <h4 class="footertext">Website Creators</h4>
+					  <p class="footertext">Taylor & Sons PLC.<br>
+					</center>
+				  </div>
+				  <div class="col-md-4">
+					<center>
+					  <img src="./assets/img/307n6ux.png" class="img-circle" alt="...">
+					  <br>
+					  <h4 class="footertext">Visual Designer</h4>
+					  <p class="footertext">JWT Design Consultants.<br>
+					</center>
+				  </div>
+				</div>
+				<div class="row">
+				<p><center><a href="#">Mills & Taylor Holdings</a> <p class="footertext">Copyright 2014</p></center></p>
+			</div>
+		</div>
+	</footer>
+
+</body>
+</html>

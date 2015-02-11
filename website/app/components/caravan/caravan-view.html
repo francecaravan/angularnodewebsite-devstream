@@ -1,0 +1,90 @@
+<div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-57565979-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+    <nav class="navbar navbar-default" role="navigation" ng-controller="NavCtrl">
+		<div class="container-fluid">
+        	<div class="navbar-header">
+                <a class="navbar-left navbar-brand" ui-sref="home">Home</a>
+            	<button type="button" class="navbar-toggle collpased" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                	<span class="sr-only">Toggle navigation</span>
+                	<span class="icon-bar"></span>
+                	<span class="icon-bar"></span>
+                	<span class="icon-bar"></span>
+            	</button>
+        	</div>
+
+
+			<div class="navbar-right collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li ng-repeat="link in links">
+						<a id="lnk{{link.text}}" href="" ui-sref="{{link.url}}" ng-class="{active: isActive(link.url)}">
+							{{link.text}}
+						</a>
+					</li>
+				</ul>
+			</div>
+        </div>
+    </nav>
+	<div class="container" ng-controller="CaravanCtrl">
+		<div id="contentsection">
+			<div class="row">
+				<div id="homepagecontenttext" class="col-xs-12 col-sm-6 col-md-6">
+					<div class="view view-first">  
+						 <img id="da_thumbs_image" alt="Boat in St Tropez Bay" src="http://localhost:8080/Photos/boat2.jpg" />
+						 <div class="mask">  
+						 <h2>Sunset</h2>  
+						 <p>St Tropez</p>  
+							 <a href="#" class="info">Read More</a>  
+						 </div>  
+					</div> 	
+				</div>
+				<div id="introduction_text" class="col-xs-12 col-sm-6 col-md-6">
+					<div id="introduction_text_title">
+						<h2>Plot 537 - Canaberies</h2>
+						<br>
+					</div>
+					<div id="introduction_text_content">
+						Welcome to the website page for the Mills family caravan.  The caravan is located at plot 537 on the Canaberies site just north of Sainte Maxime.
+						The plot has been in the Mills family since 2002.  A new caravan has been placed on the site.  Other attractions include a fresh water swimming pool.  
+						The Canaberies site is 5 minutes from the auto-route, 10 minutes from Le Muy and 20 minutes from Saint Maxime.
+						<br>
+					</div>
+				</div>
+			</div>
+		
+			<div class="row">
+				<div id="newflash" class="col-xs-12 col-sm-6 col-md-6">
+					<div id="newflash_title">
+					<h2>NEWS FLASH</h2>
+					<br>
+					</div>
+					<div id="newflash_content">
+					<p>New speed cameras on the road to Saint Maxime.  Two cameras.  One each way.</p>
+					<br>
+					</div>
+				</div>
+				<div id="mapouter" class="col-xs-12 col-sm-6 col-md-6">
+					<div id="maptitle">
+						<h2>Find us on the map</h2>
+						<br>
+					</div>	
+					<div id="googlemapcontainer">	
+						<iframe id=googlemap src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4330.632964288289!2d6.544486925393117!3d43.43662100567713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12cea56750bdfb4d%3A0x40819a5fd8fcb60!2sLe+Muy%2C+France!5e1!3m2!1sen!2suk!4v1405626810860" style="border:0"></iframe>
+					</div>
+				</div>
+			</div>
+		
+		</div>	
+
+	</div>
+</div>

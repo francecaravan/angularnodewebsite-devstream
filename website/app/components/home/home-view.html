@@ -1,0 +1,273 @@
+<div>
+
+	<script type="text/javascript">
+		$( document ).ready(function( $ ) {
+			$( '#example3' ).sliderPro({
+				fade: true,
+				arrows: true,
+				buttons: false,
+				fullScreen: true,
+				shuffle: true,
+				smallSize: 500,
+				mediumSize: 1000,
+				largeSize: 3000,
+				thumbnailArrows: true,
+				autoplay: true
+			});
+		});
+	</script>
+	
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-57565979-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+	
+
+    <!--<nav class="navbar navbar-default navbar-fixed-top" ng-controller="HomeCtrl">-->
+    <nav class="navbar navbar-default" role="navigation" ng-controller="NavCtrl">
+    	<div class="container-fluid">
+        	<div class="navbar-header">
+                <a class="navbar-left navbar-brand" ui-sref="home">Home</a>
+            	<button type="button" class="navbar-toggle collpased" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                	<span class="sr-only">Toggle navigation</span>
+                	<span class="icon-bar"></span>
+                	<span class="icon-bar"></span>
+                	<span class="icon-bar"></span>
+            	</button>
+        	</div>
+
+			<div class="navbar-right collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li ng-repeat="link in links">
+						<a id="lnk{{link.text}}" href="" ui-sref="{{link.url}}" ng-class="{active: isActive(link.url)}">
+							{{link.text}}
+						</a>
+					</li>
+				</ul>
+			</div>
+        </div>
+    </nav>
+    
+	<div class="container" ng-controller="HomeCtrl">
+		<div class = "row" style="height:auto;">
+			<section class="col-xs-12 col-sm-3 col-md-3 column1">
+				<h1>Welcome to the France Caravan Site</h1>
+				<p>
+				This site is a booking and informational site for a great caravan in the south of France.  Located close to the wonderful resorts of St Maxime and St Tropez.
+				</p>
+			</section>
+			<section class="col-xs-12 col-sm-6 col-md-6 column2">
+
+				<div id="example3" class="slider-pro">
+					<div class="sp-slides">
+						<div class="sp-slide">
+							<img class="sp-image" src="./assets/img/blank.gif" 
+								data-src="http://localhost:8080/Photos/IMG_2241.JPG"
+								data-small="http://localhost:8080/Photos/IMG_2241_Small.JPG"
+								data-medium="http://localhost:8080/Photos/IMG_2241_Medium.JPG"
+								data-large="http://localhost:8080/Photos/IMG_2241_Large.JPG"
+								data-retinasmall="http://localhost:8080/Photos/IMG_2241_Retina.JPG"
+								data-retinamedium="http://localhost:8080/Photos/IMG_2241_Retina.JPG"
+								data-retinalarge="http://localhost:8080/Photos/IMG_2241_Retina.JPG"/>
+
+							<p class="sp-layer sp-white sp-padding"
+								data-horizontal="50" data-vertical="50"
+								data-show-transition="left" data-show-delay="400">
+								The view is:
+							</p>
+
+							<p class="sp-layer sp-black sp-padding"
+								data-horizontal="180" data-vertical="50"
+								data-show-transition="left" data-show-delay="600">
+								100%
+							</p>
+
+							<p class="sp-layer sp-white sp-padding"
+								data-horizontal="315" data-vertical="50"
+								data-show-transition="left" data-show-delay="800">
+								to die for.
+							</p>
+						</div>
+
+						<div class="sp-slide">
+							<img class="sp-image" src="./assets/img/blank.gif" 
+								data-src="http://localhost:8080/Photos/IMG_2240.JPG" 
+								data-small="http://localhost:8080/Photos/IMG_2240.JPG"
+								data-medium="http://localhost:8080/Photos/IMG_2240.JPG"
+								data-large="http://localhost:8080/Photos/IMG_2240.JPG"
+								data-retinasmall="http://localhost:8080/Photos/IMG_2240_Retina.JPG"
+								data-retinamedium="http://localhost:8080/Photos/IMG_2240_Retina.JPG"
+								data-retinalarge="http://localhost:8080/Photos/IMG_2240_Retina.JPG"/>
+
+							<h3 class="sp-layer sp-black sp-padding" 
+								data-horizontal="40" data-vertical="40" 
+								data-show-transition="left">
+								Swimming in the shadow of the var
+							</h3>
+
+							<p class="sp-layer sp-white sp-padding" 
+								data-horizontal="40" data-vertical="100" 
+								data-show-transition="left" data-show-delay="200">
+								2m by 5m plunge pool
+							</p>
+
+							<p class="sp-layer sp-black sp-padding" 
+								data-horizontal="40" data-vertical="160" data-width="350" 
+								data-show-transition="left" data-show-delay="400">
+								Cool off in those hot summer days.
+							</p>
+						</div>
+
+						<div class="sp-slide">
+							<img class="sp-image" src="./assets/img/blank.gif" 
+								data-src="http://localhost:8080/Photos/IMG_2246.JPG" 
+								data-small="http://localhost:8080/Photos/IMG_2246.JPG"
+								data-medium="http://localhost:8080/Photos/IMG_2246.JPG"
+								data-large="http://localhost:8080/Photos/IMG_2246.JPG"
+								data-retinasmall="http://localhost:8080/Photos/IMG_2246_Retina.JPG"
+								data-retinamedium="http://localhost:8080/Photos/IMG_2246_Retina.JPG"
+								data-retinalarge="http://localhost:8080/Photos/IMG_2246_Retina.JPG"/>
+
+							<p class="sp-layer sp-white sp-padding" 
+								data-position="centerCenter" data-vertical="-50" 
+								data-show-transition="right" data-show-delay="500" >
+								A large and spacious caravan
+							</p>
+
+							<p class="sp-layer sp-black sp-padding" 
+								data-position="centerCenter" data-vertical="50" 
+								data-show-transition="left" data-show-delay="700">
+								sleeps up to 6
+							</p>
+						</div>
+
+						<div class="sp-slide">
+							<img class="sp-image" src="./assets/img/blank.gif" 
+								data-src="http://localhost:8080/Photos/IMG_2244.JPG" 
+								data-small="http://localhost:8080/Photos/IMG_2244.JPG"
+								data-medium="http://localhost:8080/Photos/IMG_2244.JPG"
+								data-large="http://localhost:8080/Photos/IMG_2244.JPG"
+								data-retinasmall="http://localhost:8080/Photos/IMG_2244_Retina.JPG"
+								data-retinamedium="http://localhost:8080/Photos/IMG_2244_Retina.JPG"
+								data-retinalarge="http://localhost:8080/Photos/IMG_2244_Retina.JPG"/>
+
+							<p class="sp-layer sp-black sp-padding"
+								data-position="bottomLeft" data-vertical="0" data-width="100%"
+								data-show-transition="up">
+								Outside barbecues in the summer sun are the ultimate way to enjoy the local produce.
+							</p>
+						</div>
+
+						<div class="sp-slide">
+							<img class="sp-image" src="./assets/img/blank.gif" 
+								data-src="http://localhost:8080/Photos/IMG_2245.JPG" 
+								data-small="http://localhost:8080/Photos/IMG_2245.JPG"
+								data-medium="http://localhost:8080/Photos/IMG_2245.JPG"
+								data-large="http://localhost:8080/Photos/IMG_2245.JPG"
+								data-retinasmall="http://localhost:8080/Photos/IMG_2245_Retina.JPG"
+								data-retinamedium="http://localhost:8080/Photos/IMG_2245_Retina.JPG"
+								data-retinalarge="http://localhost:8080/Photos/IMG_2245_Retina.JPG"/>
+
+							<p class="sp-layer sp-white sp-padding" 
+								data-vertical="5%" data-horizontal="5%" data-width="90%" 
+								data-show-transition="down" data-show-delay="400">
+								Large spacious patio area for outside dining.
+							</p>
+						</div>
+
+						<div class="sp-slide">
+							<img class="sp-image" src="./assets/img/blank.gif" 
+								data-src="http://localhost:8080/Photos/IMG_2243.JPG" 
+								data-small="http://localhost:8080/Photos/IMG_2243.JPG"
+								data-medium="http://localhost:8080/Photos/IMG_2243.JPG"
+								data-large="http://localhost:8080/Photos/IMG_2243.JPG"
+								data-retinasmall="http://localhost:8080/Photos/IMG_2243_Retina.JPG"
+								data-retinamedium="http://localhost:8080/Photos/IMG_2243_Retina.JPG"
+								data-retinalarge="http://localhost:8080/Photos/IMG_2243_Retina.JPG"/>
+
+							<p class="sp-layer sp-white sp-padding" 
+								data-horizontal="10" data-vertical="10" data-width="300">
+								All the usual amentities.
+							</p>
+						</div>
+
+						<div class="sp-slide">
+							<img class="sp-image" src="./assets/img/blank.gif" 
+								data-src="http://localhost:8080/Photos/IMG_2242.JPG" 
+								data-small="http://localhost:8080/Photos/IMG_2242.JPG"
+								data-medium="http://localhost:8080/Photos/IMG_2242.JPG"
+								data-large="http://localhost:8080/Photos/IMG_2242.JPG"
+								data-retinasmall="http://localhost:8080/Photos/IMG_2242_Retina.JPG"
+								data-retinamedium="http://localhost:8080/Photos/IMG_2242_Retina.JPG"
+								data-retinalarge="http://localhost:8080/Photos/IMG_2242_Retina.JPG"/>
+
+							<p class="sp-layer sp-black sp-padding" 
+								data-position="bottomLeft" data-horizontal="5%" data-vertical="5%" data-width="90%" 
+								data-show-transition="up" data-show-delay="400">
+								Distant villages pepper the horizon.
+							</p>
+						</div>
+
+					</div>
+
+					<div class="sp-thumbnails">
+						<img class="sp-thumbnail" src="http://localhost:8080/Photos/IMG_2241_Small.JPG"/>
+						<img class="sp-thumbnail" src="http://localhost:8080/Photos/IMG_2240.JPG"/>
+						<img class="sp-thumbnail" src="http://localhost:8080/Photos/IMG_2246.JPG"/>
+						<img class="sp-thumbnail" src="http://localhost:8080/Photos/IMG_2244.JPG"/>
+						<img class="sp-thumbnail" src="http://localhost:8080/Photos/IMG_2245.JPG"/>
+						<img class="sp-thumbnail" src="http://localhost:8080/Photos/IMG_2243.JPG"/>
+						<img class="sp-thumbnail" src="http://localhost:8080/Photos/IMG_2242.JPG"/>
+					</div>
+				</div>
+
+			</section>
+			<section class="col-xs-12 col-sm-3 col-md-3 column1">
+				<h2>Local Weather</h2>
+				<highchart id="chart1" config="highchartsNG"></highchart>
+			</section>
+		</div>
+
+		 
+
+		<div class = "row">
+			<section class="col-xs-12 col-sm-12 col-md-12">
+
+			<table style="border:1px solid black;width:100%;vertical-align:middle;">
+				<tr>
+					<th ng-repeat="(key, val) in home_deals[0] track by $index | orderBy : home_deals[3] : reverse">{{key}}</th>
+				</tr>
+				<tr ng-class="{blue: hover,italic: hover}" ng-mouseenter="hover = true" ng-mouseleave="hover = false" ng-repeat="item in home_deals track by $index">
+					<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+					<td ng-repeat="(key, val) in item">{{val}}</td>
+				</tr>
+			</table>
+			</section>
+		</div>
+		
+		<div class = "row">
+			<section class="col-xs-12 col-sm-12 col-md-12">
+
+			<table style="border:1px solid black;width:100%;vertical-align:middle;">
+				<tr>
+					<th ng-repeat="(key, val) in home_bookings[0] track by $index | orderBy : home_bookings[3] : reverse">{{key}}</th>
+				</tr>
+				<tr ng-class="{blue: hover,italic: hover}" ng-mouseenter="hover = true" ng-mouseleave="hover = false" ng-repeat="item in home_bookings track by $index">
+					<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+					<td ng-repeat="(key, val) in item">{{val}}</td>
+				</tr>
+			</table>
+			</section>
+		</div>
+
+	</div>
+
+</div>
+
+

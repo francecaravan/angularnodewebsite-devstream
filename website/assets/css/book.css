@@ -1,0 +1,17 @@
+/* Styling for book page */
+datecalendar-arr {
+display:inline-block; 
+min-height:290px; 
+min-width:200px;
+}
+
+datecalendar-dep {
+display:inline-block; 
+min-height:290px; 
+min-width:200px;
+}
+
+.btn-book-style {
+height: 50px; 
+width:200px;
+}
